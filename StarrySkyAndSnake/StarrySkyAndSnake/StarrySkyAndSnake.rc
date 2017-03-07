@@ -1,0 +1,322 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\StarrySkyAndSnake.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\snakegame.ico"
+IDI_SNAKEvertical       ICON    DISCARDABLE     "res\\ico00001.ico"
+IDI_SNAKETAILup         ICON    DISCARDABLE     "res\\snake2.ico"
+IDI_SNAKETAILright      ICON    DISCARDABLE     "res\\snaketai.ico"
+IDI_SNAKETAILleft       ICON    DISCARDABLE     "res\\ico00004.ico"
+IDI_SNAKETAILdown       ICON    DISCARDABLE     "res\\ico00005.ico"
+IDI_SNAKEhorizontal     ICON    DISCARDABLE     "res\\snake.ico"
+IDI_SNAKEHEADup         ICON    DISCARDABLE     "res\\snake1.ico"
+IDI_SNAKEHEADright      ICON    DISCARDABLE     "res\\ico00003.ico"
+IDI_SNAKEHEADleft       ICON    DISCARDABLE     "res\\ico00002.ico"
+IDI_SNAKEHEADdown       ICON    DISCARDABLE     "res\\snakehea.ico"
+IDI_SNAKEcorner4        ICON    DISCARDABLE     "res\\ico00010.ico"
+IDI_SNAKEcorner3        ICON    DISCARDABLE     "res\\ico00009.ico"
+IDI_SNAKEcorner2        ICON    DISCARDABLE     "res\\snakecor.ico"
+IDI_SNAKEcorner1        ICON    DISCARDABLE     "res\\icon1.ico"
+IDI_APPLE               ICON    DISCARDABLE     "res\\apple.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 StarrySkyAndSnake"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "StarrySkyAndSnake 1.0 版",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2013",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_STARRYSKYANDSNAKE_DIALOG DIALOGEX 0, 0, 320, 200
+STYLE WS_POPUP | WS_VISIBLE
+EXSTYLE WS_EX_APPWINDOW
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+END
+
+IDD_DIALOG_CLOSEWND DIALOG DISCARDABLE  0, 0, 187, 98
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 10, "System"
+BEGIN
+    PUSHBUTTON      "最小化",IDC_CLOSEWND,97,61,50,14
+    EDITTEXT        IDC_EDIT,41,38,106,14,ES_AUTOHSCROLL
+    LTEXT           "请输入你要关闭窗口的标题",IDC_STATIC,45,22,97,8,
+                    SS_CENTERIMAGE
+    PUSHBUTTON      "关闭",IDC_DESTROYWND,41,61,50,14
+END
+
+IDD_DIALOG_SKYSET DIALOGEX 0, 0, 292, 126
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    CONTROL         "红色",IDC_RED,"Button",BS_AUTORADIOBUTTON | WS_GROUP,15,
+                    25,32,10
+    CONTROL         "绿色",IDC_GREEN,"Button",BS_AUTORADIOBUTTON,15,37,32,10
+    CONTROL         "蓝色",IDC_BLUE,"Button",BS_AUTORADIOBUTTON,15,49,32,10
+    CONTROL         "白色",IDC_WHITE,"Button",BS_AUTORADIOBUTTON,15,61,32,10
+    CONTROL         "彩色",IDC_MULTIPLECOLOR,"Button",BS_AUTORADIOBUTTON,15,
+                    73,32,10
+    CONTROL         "自定义",IDC_CUSTOMCOLOR,"Button",BS_AUTORADIOBUTTON,52,
+                    25,35,10
+    CONTROL         "",IDC_COLORVIEW,"Static",SS_ENHMETAFILE,89,22,20,20,
+                    WS_EX_CLIENTEDGE
+    CONTROL         "Slider2",IDC_SLIDER_RED,"msctls_trackbar32",TBS_NOTICKS | 
+                    WS_TABSTOP,47,48,56,12
+    CONTROL         "Slider2",IDC_SLIDER_GREEN,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,47,60,56,12
+    CONTROL         "Slider2",IDC_SLIDER_BLUE,"msctls_trackbar32",TBS_TOP | 
+                    TBS_NOTICKS | WS_TABSTOP,47,72,56,13
+    CTEXT           "红",IDC_STATIC,102,48,15,12
+    CTEXT           "绿",IDC_STATIC,102,60,15,12
+    CTEXT           "蓝",IDC_STATIC,102,72,15,12
+    CONTROL         "闪烁",IDC_FLASH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    141,22,32,10
+    EDITTEXT        IDC_EDIT_COUNT,211,34,56,14,ES_AUTOHSCROLL | ES_NUMBER,
+                    WS_EX_DLGMODALFRAME | WS_EX_RIGHT
+    CONTROL         "Spin1",IDC_SPIN_COUNT,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,270,34,7,14
+    CONTROL         "Slider1",IDC_SLIDER_COUNT,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,213,50,64,15
+    PUSHBUTTON      "取消",IDC_SET_CANCEL,232,105,25,14
+    PUSHBUTTON      "保存",IDC_SET_SAVE,262,105,24,14
+    LTEXT           "流星个数：",IDC_STATIC,214,22,43,10
+    GROUPBOX        "参数",IDC_STATIC,208,10,84,91
+    GROUPBOX        "风格",IDC_STATIC,134,10,67,91
+    GROUPBOX        "颜色",IDC_STATIC,0,10,126,91
+    PUSHBUTTON      "恢复默认",IDC_SET_RESET,0,107,38,14
+    LTEXT           "星体增量：",IDC_STATIC,214,68,50,8
+    EDITTEXT        IDC_EDIT_SIZEINCREMENT,212,80,56,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER,WS_EX_DLGMODALFRAME | WS_EX_RIGHT
+    CONTROL         "透明",IDC_TRANSPARENT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,141,37,32,10
+    CONTROL         "Slider1",IDC_SLIDER_TRANSPARENT,"msctls_trackbar32",
+                    TBS_BOTH | TBS_NOTICKS | TBS_ENABLESELRANGE | WS_TABSTOP,
+                    135,53,64,15
+    CONTROL         "纯透明",IDC_TRANSPARENT_PURL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,141,71,40,10
+END
+
+IDD_DIALOG_SNAKESET DIALOG DISCARDABLE  0, 0, 213, 141
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 10, "System"
+BEGIN
+    GROUPBOX        "游戏难度",IDC_STATIC,7,24,70,85
+    CONTROL         "容易",IDC_EASY,"Button",BS_AUTORADIOBUTTON | WS_GROUP,
+                    20,43,32,10
+    CONTROL         "普通",IDC_NORMAL,"Button",BS_AUTORADIOBUTTON,20,64,32,
+                    10
+    CONTROL         "困难",IDC_HARD,"Button",BS_AUTORADIOBUTTON,20,85,32,10
+    PUSHBUTTON      "取消",IDC_CANCEL,115,120,34,14
+    PUSHBUTTON      "确定",IDC_SAVE,172,120,34,14
+    PUSHBUTTON      "恢复默认",IDC_RESET,7,120,34,14
+    GROUPBOX        "游戏属性",IDC_STATIC,86,24,70,85
+    CONTROL         "不死模式",IDC_UNDEAD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,104,43,48,10
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "StarrySkyAndSnake Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "StarrySkyAndSnake\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2013\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "StarrySkyAndSnake.EXE\0"
+            VALUE "ProductName", "StarrySkyAndSnake 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_STARRYSKYANDSNAKE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
+
+    IDD_DIALOG_CLOSEWND, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 91
+    END
+
+    IDD_DIALOG_SKYSET, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 119
+    END
+
+    IDD_DIALOG_SNAKESET, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 206
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 134
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 StarrySkyAndSnake(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\StarrySkyAndSnake.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
