@@ -30,7 +30,7 @@ static char THIS_FILE[]=__FILE__;
 
 CStar::CStar(int count) :m_MaxCount(count)
 {
-	srand(time(0));
+	srand((unsigned int)time(0));
 	m_StarStyle = S_WHITE;
 	m_FlashFlag = TRUE;
 	m_sizeIncrement = 1;
@@ -58,22 +58,16 @@ void CStar::Show()
 			list<PSI>::iterator itt = ++it;
 			m_StarList.erase(--it);
 			it = itt;
-			if (m_StarList.size() < m_MaxCount)
-				NewStar();
 			continue;
 		}
 		int x =(*it)->m_x + Rect.right/2;
-		int y =(*it)->m_angle*(*it)->m_x + Rect.bottom/2;
+		int y =(int)((*it)->m_angle*(*it)->m_x) + Rect.bottom/2;
 		POINT pos = {x, y};
 		StarFly(pos, (*it)->m_size, (*it)->m_color);
 		int count = (*it)->m_flycount++;
-		for(int i=1; i<300; i++){
-			if(count <= i*2 && count>i*2-2){
-				(*it)->m_x += (*it)->m_x>0?P((*it)->m_size):-P((*it)->m_size);
-				if(count == i*2 && count > 5)
-					(*it)->m_size+=m_sizeIncrement;
-			}
-		}
+		(*it)->m_x += (*it)->m_x > 0 ? P((*it)->m_size) : -P((*it)->m_size);
+		if (count%2 && count>5)
+			(*it)->m_size += m_sizeIncrement;
 		it++;
 	}
 }
@@ -199,7 +193,7 @@ BOOL CStar::GetFlashFlag()
 	return m_FlashFlag;
 }
 
-void CStar::SetMaxCount(int maxcount)
+void CStar::SetMaxCount(unsigned int maxcount)
 {
 	m_MaxCount = maxcount;
 }
@@ -214,7 +208,7 @@ void CStar::SetCustomColor(COLORREF color)
 }
 
 
-int CStar::GetMaxCount()
+unsigned int CStar::GetMaxCount()
 {
 	return m_MaxCount;
 }

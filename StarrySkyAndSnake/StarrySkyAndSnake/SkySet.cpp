@@ -153,8 +153,8 @@ BOOL CSkySet::OnInitDialog()
 	m_SliderRedCtrl.SetRange(0, 255, TRUE);
 	m_SliderGreenCtrl.SetRange(0, 255, TRUE);
 	m_SliderBlueCtrl.SetRange(0, 255, TRUE);
-	m_SliderCountCtrl.SetRange(0, 10000, TRUE);
-	m_SpinCountCtrl.SetRange(0, 10000);
+	m_SliderCountCtrl.SetRange(0, 1000, TRUE);
+	m_SpinCountCtrl.SetRange(0, 1000);
 	m_SliderTransCtrl.SetRange(0,255,TRUE);
 	//设置流行个数初始参数
 	m_SliderTransValue = Star.GetTransparent();

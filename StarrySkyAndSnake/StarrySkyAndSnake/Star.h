@@ -29,9 +29,9 @@ public:
 	void SetPureStyle(BOOL Pure);
 	int GetSizeIncrement();
 	void SetSizeIncrement(int Increment);
-	int GetMaxCount();
+	unsigned int GetMaxCount();
 	void SetCustomColor(COLORREF color);
-	void SetMaxCount(int maxcount);
+	void SetMaxCount(unsigned int maxcount);
 	BYTE GetTransparent();
 	void SetTransparent(BYTE Trans);
 	BOOL GetFlashFlag();
@@ -49,7 +49,7 @@ private:
 	int m_sizeIncrement;
 	COLORREF	m_CustomColor;
 	list<PSI>	m_StarList;
-	int			m_MaxCount;
+	unsigned int m_MaxCount;
 	STARSTYLE	m_StarStyle;
 	BOOL		m_FlashFlag;
 	BOOL		m_SmoothFlag;

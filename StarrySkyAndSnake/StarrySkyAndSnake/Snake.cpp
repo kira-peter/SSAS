@@ -29,7 +29,7 @@ CSnake::CSnake()
 	m_UnDead = false;
 	goon = 0;
 	Add(32,32);
-	srand(time(0));
+	srand((unsigned int)time(0));
 	apple.m=(rand()%30)*16;
 	apple.n=(rand()%30)*16;
 }
@@ -218,7 +218,7 @@ void CSnake::GameOver()
 		direction = 4;
 		m_list.RemoveAll();
 		Add(32,32);
-		srand(time(0));
+		srand((unsigned int)time(0));
 		apple.m=(rand()%10)*16;
 		apple.n=(rand()%10)*16;
 		glo=0;

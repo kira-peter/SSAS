@@ -130,7 +130,7 @@ BOOL CStarrySkyAndSnakeDlg::OnInitDialog()
 	Snake.SetpWnd(this);
 	Snake.InitSanke();
 	SetTimer(2, 1, ChangeRgn);
-	((CStarrySkyAndSnakeDlg*)AfxGetMainWnd())->SetTransparent(222);
+	((CStarrySkyAndSnakeDlg*)AfxGetMainWnd())->SetTransparent(100);
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
 
@@ -193,16 +193,18 @@ void CALLBACK EXPORT ChangeRgn(HWND hwnd, UINT uMsg, UINT idEvent, DWORD dwTime)
 	AfxGetMainWnd()->GetWindowRect( &rect);
 	int x = rect.right/2;
 	int y = rect.bottom/2;
+	//屏幕对角线一半为原型区域的半径
+	int radiusMax = (int)sqrt(x * x + y * y);
 	static int radius = 0;
 	rgn1.CreateEllipticRgn(x - radius, y - radius, x +radius, y + radius);
-	radius += 40;
+	radius += 10;
 	AfxGetMainWnd()->SetWindowRgn(rgn1, TRUE);
-	if (radius > 900)
+	if (radius > radiusMax)
 	{
 		KillTimer(AfxGetApp()->m_pMainWnd->m_hWnd, 2);
-		Star.SetTransparent(222);
-		((CStarrySkyAndSnakeDlg*)AfxGetMainWnd())->SetTransparent(222);
-		((CStarrySkyAndSnakeDlg*)AfxGetMainWnd())->SetTimer(1, 100, NULL);
+		Star.SetTransparent(0);
+		((CStarrySkyAndSnakeDlg*)AfxGetMainWnd())->SetTransparent(255);
+		((CStarrySkyAndSnakeDlg*)AfxGetMainWnd())->SetTimer(1, 10, NULL);
 	}
 }
 
